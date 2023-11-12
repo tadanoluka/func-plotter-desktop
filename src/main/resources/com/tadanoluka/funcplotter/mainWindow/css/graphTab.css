@@ -1,0 +1,44 @@
+.vbox {
+    -fx-background-color: #3D3E45;
+    -fx-padding: 30 10 10 10;
+    -fx-spacing: 30;
+}
+.textArea {
+    -fx-background-color:  #3D3E45;
+    -fx-text-fill: #fff;
+    -fx-pref-height: 60;
+}
+.textArea .content {
+    -fx-background-color: #4F5056;
+    -fx-background-insets: 0;
+    -fx-background-radius: 7;
+
+    -fx-border-color: none;
+    -fx-border-radius: 0;
+    -fx-border-width: 0;
+    -fx-border-insets: 0;
+}
+.textArea .scroll-pane {
+    -fx-background-color: transparent;
+}
+.textArea .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.numpad .button{
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+    -fx-max-width: infinity;
+    -fx-max-height: Infinity;
+}
+.numpad .button:hover{
+    -fx-background-color: #36383d;
+    -fx-border-radius: 7 7 7 7;
+    -fx-background-radius: 7 7 7 7;
+}
+.numpad .button:pressed{
+    -fx-background-color: #2e3034;
+    -fx-border-radius: 7 7 7 7;
+    -fx-background-radius: 7 7 7 7;
+}

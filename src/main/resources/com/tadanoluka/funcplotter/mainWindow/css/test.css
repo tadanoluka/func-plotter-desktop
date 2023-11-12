@@ -1,0 +1,37 @@
+.jfx-rippler{
+    -fx-rippler-fill:RED;
+}
+
+.jfx-combo-box .jfx-rippler{
+    -fx-rippler-fill:RED;
+}
+.jfx-combo-box:hover .jfx-rippler{
+    -fx-rippler-fill:RED;
+}
+.jfx-combo-box:pressed .jfx-rippler{
+    -fx-rippler-fill:RED;
+}
+.jfx-combo-box .list-cell:filled:selected .jfx-rippler{
+    -fx-rippler-fill:RED;
+}
+.jfx-combo-box .input-line .jfx-rippler{
+    -fx-rippler-fill:RED;
+}
+.jfx-combo-box .input-focused-line .jfx-rippler{
+    -fx-rippler-fill:RED;
+}
+.jfx-combo-box .list-cell .jfx-rippler{
+    -fx-rippler-fill:RED;
+}
+.jfx-combo-box .list-cell:hover .jfx-rippler{
+    -fx-rippler-fill:RED;
+}
+.jfx-combo-box .list-cell:pressed .jfx-rippler{
+    -fx-rippler-fill:RED;
+}
+.jfx-combo-box .list-view .jfx-rippler{
+    -fx-rippler-fill:RED;
+}
+.jfx-combo-box .combo-box-button-container {
+    -fx-rippler-fill:RED;
+}

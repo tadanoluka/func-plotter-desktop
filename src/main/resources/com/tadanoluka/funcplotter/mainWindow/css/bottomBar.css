@@ -1,0 +1,6 @@
+.bottomWindowBar {
+    -fx-background-color: #3D3E45;
+}
+.bottomWindowBar .label {
+    -fx-text-fill: #ffffff;
+}

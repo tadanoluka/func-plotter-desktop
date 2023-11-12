@@ -1,0 +1,138 @@
+
+.colorTab {
+    -fx-background-color: #3D3E45;
+    -fx-padding: 30 10 10 10;
+    -fx-spacing: 10;
+}
+.colorTab .label {
+    -fx-text-fill: #fff;
+}
+.colorTab .radio-button .label {
+    -fx-text-fill: #fff;
+}
+.categoryProperties {
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-color: #2d2e33;
+    -fx-border-width: 1;
+}
+.categoryProperties .titledPane {
+    -fx-background-color: transparent
+}
+.categoryProperties .jfx-check-box {
+    -fx-text-fill: #fff;
+    -jfx-checked-color: #2d2e33;
+    -jfx-unchecked-color: #2d2e33;
+}
+
+
+.categoryGridPane .text-field {
+    -fx-background-color: transparent;
+}
+.categoryGridPane .color-picker {
+    /*-fx-skin: "CustomSkin";*/
+    -fx-background-color: #2d2e33;
+    -fx-mark-highlight-color: #fff;
+    -fx-mark-color: #fff;
+    -fx-background-radius: 7 7 7 7;
+}
+.categoryGridPane .color-picker:hover {
+    -fx-background-color: #292A2E;
+}
+.categoryGridPane .color-picker:pressed {
+    -fx-background-color: #25262A;
+}
+.categoryGridPane .context-menu {
+    -fx-background-color: #25262A;
+}
+.categoryGridPane .combo-box {
+    -fx-background-color: #2d2e33;
+    -fx-mark-highlight-color: #fff;
+    -fx-mark-color: #fff;
+    -fx-background-radius: 7 7 7 7;
+}
+.categoryGridPane .combo-box:hover {
+    -fx-background-color: #292A2E;
+}
+.categoryGridPane .combo-box:pressed {
+    -fx-background-color: #25262A;
+}
+.categoryGridPane .combo-box .list-cell:filled:selected {
+    -fx-fill: black;
+}
+.categoryGridPane .combo-box .input-line {
+    -fx-pref-height: 0;
+}
+.categoryGridPane .combo-box .input-focused-line {
+    -fx-pref-height: 0;
+}
+.categoryGridPane .combo-box-popup .list-view .jfx-list-cell .jfx-rippler {
+    -jfx-rippler-fill: #222326;
+}
+.categoryGridPane .combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 7 7 7 7;
+}
+.categoryGridPane .combo-box .list-cell:hover {
+    -fx-background-color: #292A2E;
+}
+.categoryGridPane .combo-box .list-cell:pressed {
+    -fx-background-color: #292A2E;
+}
+.categoryGridPane .combo-box .list-view {
+    -fx-background-color: #323339;
+    -fx-background-radius: 7 7 7 7;
+}
+.categoryGridPane .hboxTextField {
+    -fx-background-color: #2d2e33;
+    -fx-background-radius: 7 7 7 7;
+    -fx-spacing: 2;
+}
+.categoryGridPane .hboxTextField:hover {
+    -fx-background-color: #292A2E;
+}
+.categoryGridPane .hboxTextField:pressed {
+    -fx-background-color: #25262A;
+}
+.categoryGridPane .hboxTextField .text-field {
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center-right;
+}
+.categoryGridPane .hboxTextField .text-field .input-line {
+    -fx-pref-height: 0;
+}
+.categoryGridPane .hboxTextField .text-field .input-focused-line {
+    -fx-pref-height: 0;
+}
+
+.categoryGridPane .hboxTextField .label {
+    -fx-alignment: center-right;
+}
+.categoryGridPane .slider .track {
+    -fx-background-color: #4F5056;
+    -fx-pref-height: 7;
+    -fx-border-color: #292A2E;
+    -fx-border-radius: 7 7 7 7;
+}
+.categoryGridPane .slider .colored-track {
+    -fx-background-color: #37383F;
+    -fx-border-color: #292A2E;
+    -fx-border-radius: 7 7 7 7;
+}
+.categoryGridPane .slider .animated-thumb {
+    -fx-background-color: #222326;
+}
+.categoryGridPane .slider .thumb {
+    -fx-background-color: #3D3E45;
+    -fx-background-radius: 7 7 7 7;
+    -fx-border-color: #292A2E;
+    -fx-border-radius: 7 7 7 7;
+}
+.categoryGridPane .slider:hover .thumb {
+    -fx-background-color: #37383F;
+    -fx-border-color: #25262A;
+}
+.categoryGridPane .slider:pressed .thumb {
+    -fx-background-color: #323339;
+    -fx-border-color: #222326;
+}

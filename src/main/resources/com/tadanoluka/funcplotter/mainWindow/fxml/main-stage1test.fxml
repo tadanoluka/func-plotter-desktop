@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tadanoluka.funcplotter.mainWindow.MainWindowController">
+   <center>
+       <SplitPane dividerPositions="0.3212050078247261" prefHeight="575.0" prefWidth="800.0" stylesheets="@../css/main.css" BorderPane.alignment="CENTER">
+           <styleClass>
+               <String fx:value="mainWindowSplitPane" />
+           </styleClass>
+           <TabPane minWidth="400.0" prefWidth="450.0" side="LEFT" styleClass="leftSideTabPane" stylesheets="@../css/main.css" tabClosingPolicy="UNAVAILABLE" tabMinHeight="40.0">
+               <opaqueInsets>
+                   <Insets />
+               </opaqueInsets>
+               <Tab closable="false">
+                   <graphic>
+                       <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <Image url="@../leftWindowBarIcons/icons8-plot-20-1.png" />
+                       </ImageView>
+                   </graphic>
+                   <VBox prefHeight="200.0" prefWidth="100.0" styleClass="vbox" stylesheets="@../css/graphTab.css">
+                       <TextArea prefHeight="200.0" prefWidth="200.0" promptText="enter your function here" styleClass="textArea" stylesheets="@../css/graphTab.css" />
+                       <GridPane alignment="CENTER" prefHeight="250.0" prefWidth="270.0" styleClass="numpad" stylesheets="@../css/graphTab.css">
+                           <columnConstraints>
+                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="√" textAlignment="CENTER" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="sin" textAlignment="CENTER" GridPane.columnIndex="1" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="cos" textAlignment="CENTER" GridPane.columnIndex="2" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="tan" textAlignment="CENTER" GridPane.columnIndex="3" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="÷" textAlignment="CENTER" GridPane.columnIndex="4" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="x²" textAlignment="CENTER" GridPane.rowIndex="1" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="7" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="8" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="9" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="x" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="x^y" textAlignment="CENTER" GridPane.rowIndex="2" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="4" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="5" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="6" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="-" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="10^x" textAlignment="CENTER" GridPane.rowIndex="3" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="1" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="2" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="3" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="+" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="(" textAlignment="CENTER" GridPane.rowIndex="4" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text=")" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="," textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                           <Button focusTraversable="false" mnemonicParsing="false" stylesheets="@../css/graphTab.css" text="±" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                       </GridPane>
+                   </VBox>
+               </Tab>
+               <Tab closable="false">
+                   <graphic>
+                       <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <Image url="@../leftWindowBarIcons/icons8-color-switch-20-1.png" />
+                       </ImageView>
+                   </graphic>
+               <content>
+                  <ScrollPane prefHeight="654.0" prefWidth="367.0">
+                     <content>
+                            <VBox prefHeight="849.0" prefWidth="344.0" styleClass="colorTab" stylesheets="@../css/colorTab.css">
+                           <children>
+                                   <VBox fx:id="categoryVBox1" prefWidth="324.0" styleClass="categoryProperties" stylesheets="@../css/colorTab.css">
+                                 <JFXCheckBox focusTraversable="false" minHeight="20.0" minWidth="55.0" text="Grid" textFill="WHITE">
+                                    <font>
+                                       <Font name="System Bold" size="14.0" />
+                                    </font>
+                                 </JFXCheckBox>
+                                       <GridPane alignment="CENTER_LEFT" minHeight="150.0" minWidth="302.0" prefWidth="350.0" styleClass="categoryGridPane" stylesheets="@../css/colorTab.css">
+                                           <columnConstraints>
+                                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="83.0" />
+                                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="59.0" />
+                                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.0" minWidth="10.0" prefWidth="172.0" />
+                                           </columnConstraints>
+                                           <rowConstraints>
+                                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                           </rowConstraints>
+                                           <opaqueInsets>
+                                               <Insets />
+                                           </opaqueInsets>
+                                           <VBox.margin>
+                                               <Insets bottom="10.0" left="10.0" right="10.0" />
+                                           </VBox.margin>
+                                           <Label text="Color">
+                                               <GridPane.margin>
+                                                   <Insets right="5.0" top="5.0" />
+                                               </GridPane.margin>
+                                           </Label>
+                                           <ColorPicker fx:id="gridColorPicker" maxWidth="1.7976931348623157E308" onAction="#onGridLineColorPickerAction" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                                               <GridPane.margin>
+                                                   <Insets top="5.0" />
+                                               </GridPane.margin>
+                                           </ColorPicker>
+                                           <Label text="Line type" GridPane.rowIndex="1">
+                                               <GridPane.margin>
+                                                   <Insets right="5.0" top="5.0" />
+                                               </GridPane.margin>
+                                           </Label>
+                                    <JFXComboBox fx:id="colorTabGridLineTypeComboBox" focusColor="RED" maxWidth="1.7976931348623157E308" onAction="#onGridLineTypeAction" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets top="5.0" />
+                                       </GridPane.margin>
+                                    </JFXComboBox>
+                                           <Label text="Line width" GridPane.rowIndex="2">
+                                               <GridPane.margin>
+                                                   <Insets right="5.0" top="5.0" />
+                                               </GridPane.margin>
+                                           </Label>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hboxTextField" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <JFXTextField fx:id="gridLineWidthTextField" alignment="CENTER_RIGHT" text="12,43">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" maxHeight="17.0" maxWidth="13.0" minHeight="17.0" minWidth="13.0" prefHeight="17.0" prefWidth="5.0" text="px" textAlignment="RIGHT">
+                                             <HBox.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets top="5.0" />
+                                       </GridPane.margin>
+                                    </HBox>
+                                    <JFXSlider fx:id="gridLineWidthSlider" max="10.0" min="1.0" onMouseDragged="#onGridLineWidthSliderMouseDragged" value="1.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </GridPane.margin>
+                                    </JFXSlider>
+                                           <Label fx:id="gridDashLengthLabel" text="Dash length" GridPane.rowIndex="3">
+                                               <GridPane.margin>
+                                                   <Insets right="5.0" top="5.0" />
+                                               </GridPane.margin>
+                                           </Label>
+                                           <HBox fx:id="gridDashLengthHBox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="hboxTextField" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                               <GridPane.margin>
+                                                   <Insets top="5.0" />
+                                               </GridPane.margin>
+                                       <JFXTextField fx:id="gridLineDashLengthTextField" alignment="CENTER_RIGHT">
+                                          <HBox.margin>
+                                             <Insets left="5.0" />
+                                          </HBox.margin>
+                                       </JFXTextField>
+                                               <Label alignment="CENTER_RIGHT" maxHeight="17.0" maxWidth="13.0" minHeight="17.0" minWidth="13.0" prefHeight="17.0" prefWidth="13.0" text="px">
+                                          <HBox.margin>
+                                             <Insets right="5.0" />
+                                          </HBox.margin>
+                                       </Label>
+                                           </HBox>
+                                    <JFXSlider fx:id="gridLineDashLengthSlider" max="30.0" min="1.0" onMouseDragged="#onGridDashLineLengthSliderMouseDragged" value="3.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </GridPane.margin>
+                                    </JFXSlider>
+                                           <Label fx:id="gridDashIntervalLabel" text="Dash interval" GridPane.rowIndex="4">
+                                               <GridPane.margin>
+                                                   <Insets right="5.0" top="5.0" />
+                                               </GridPane.margin>
+                                           </Label>
+                                           <HBox fx:id="gridDashIntervalHBox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="hboxTextField" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                               <GridPane.margin>
+                                                   <Insets top="5.0" />
+                                               </GridPane.margin>
+                                       <JFXTextField fx:id="gridLineDashIntervalTextField" alignment="CENTER_RIGHT">
+                                          <HBox.margin>
+                                             <Insets left="5.0" />
+                                          </HBox.margin>
+                                       </JFXTextField>
+                                               <Label alignment="CENTER_RIGHT" maxHeight="17.0" maxWidth="13.0" minHeight="17.0" minWidth="13.0" prefHeight="17.0" prefWidth="13.0" text="px">
+                                          <HBox.margin>
+                                             <Insets right="5.0" />
+                                          </HBox.margin>
+                                       </Label>
+                                           </HBox>
+                                    <JFXSlider fx:id="gridLineDashIntervalSlider" max="30.0" min="1.0" onMouseDragged="#onGridDashLineIntervalSliderMouseDragged" value="4.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </GridPane.margin>
+                                    </JFXSlider>
+                                       </GridPane>
+                                   </VBox>
+                              <VBox fx:id="categoryVBox2" prefWidth="370.0" styleClass="categoryProperties" stylesheets="@../css/colorTab.css">
+                                 <children>
+                                    <Label prefHeight="20.0" prefWidth="55.0" text="Subgrid">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <GridPane alignment="CENTER_LEFT" prefWidth="350.0" styleClass="categoryGridPane" stylesheets="@../css/colorTab.css">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="59.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.0" minWidth="10.0" prefWidth="172.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label text="Color">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <ColorPicker fx:id="gridColorPicker1" maxWidth="1.7976931348623157E308" onAction="#onGridLineColorPickerAction" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                          </ColorPicker>
+                                          <Label text="Line type" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <JFXComboBox fx:id="colorTabGridLineTypeComboBox1" focusColor="RED" maxWidth="1.7976931348623157E308" onAction="#onGridLineTypeAction" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                          </JFXComboBox>
+                                          <Label text="Line width" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hboxTextField" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <children>
+                                                <JFXTextField alignment="CENTER_RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </JFXTextField>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" maxHeight="17.0" maxWidth="13.0" minHeight="17.0" minWidth="13.0" prefHeight="17.0" prefWidth="13.0" text="px" textAlignment="CENTER">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <JFXSlider fx:id="gridLineWidthSlider1" max="10.0" min="1.0" onMouseDragged="#onGridLineWidthSliderMouseDragged" value="1.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </JFXSlider>
+                                          <Label fx:id="gridDashLengthLabel1" text="Dash length" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <HBox fx:id="gridDashLengthHBox1" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="hboxTextField" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                             <children>
+                                                <JFXTextField alignment="CENTER_RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </JFXTextField>
+                                                <Label alignment="CENTER_RIGHT" maxHeight="17.0" maxWidth="13.0" minHeight="17.0" minWidth="13.0" prefHeight="17.0" prefWidth="13.0" text="px">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <JFXSlider fx:id="gridLineDashLengthSlider1" max="30.0" min="1.0" onMouseDragged="#onGridDashLineLengthSliderMouseDragged" value="3.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </JFXSlider>
+                                          <Label fx:id="gridDashIntervalLabel1" text="Dash interval" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <HBox fx:id="gridDashIntervalHBox1" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="hboxTextField" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                             <children>
+                                                <JFXTextField alignment="CENTER_RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </JFXTextField>
+                                                <Label alignment="CENTER_RIGHT" maxHeight="17.0" maxWidth="13.0" minHeight="17.0" minWidth="13.0" prefHeight="17.0" prefWidth="13.0" text="px">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <JFXSlider fx:id="gridLineDashIntervalSlider1" max="30.0" min="1.0" onMouseDragged="#onGridDashLineIntervalSliderMouseDragged" value="4.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </JFXSlider>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="categoryVBox21" prefWidth="370.0" styleClass="categoryProperties" stylesheets="@../css/colorTab.css">
+                                 <children>
+                                    <Label prefHeight="20.0" prefWidth="55.0" text="Subgrid">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <GridPane alignment="CENTER_LEFT" prefWidth="350.0" styleClass="categoryGridPane" stylesheets="@../css/colorTab.css">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="59.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.0" minWidth="10.0" prefWidth="172.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label text="Color">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <ColorPicker fx:id="gridColorPicker11" maxWidth="1.7976931348623157E308" onAction="#onGridLineColorPickerAction" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                          </ColorPicker>
+                                          <Label text="Line type" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <JFXComboBox fx:id="colorTabGridLineTypeComboBox11" focusColor="RED" maxWidth="1.7976931348623157E308" onAction="#onGridLineTypeAction" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                          </JFXComboBox>
+                                          <Label text="Line width" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hboxTextField" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <children>
+                                                <JFXTextField alignment="CENTER_RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </JFXTextField>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" maxHeight="17.0" maxWidth="13.0" minHeight="17.0" minWidth="13.0" prefHeight="17.0" prefWidth="13.0" text="px" textAlignment="CENTER">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <JFXSlider fx:id="gridLineWidthSlider11" max="10.0" min="1.0" onMouseDragged="#onGridLineWidthSliderMouseDragged" value="1.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </JFXSlider>
+                                          <Label fx:id="gridDashLengthLabel11" text="Dash length" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <HBox fx:id="gridDashLengthHBox11" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="hboxTextField" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                             <children>
+                                                <JFXTextField alignment="CENTER_RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </JFXTextField>
+                                                <Label alignment="CENTER_RIGHT" maxHeight="17.0" maxWidth="13.0" minHeight="17.0" minWidth="13.0" prefHeight="17.0" prefWidth="13.0" text="px">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <JFXSlider fx:id="gridLineDashLengthSlider11" max="30.0" min="1.0" onMouseDragged="#onGridDashLineLengthSliderMouseDragged" value="3.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </JFXSlider>
+                                          <Label fx:id="gridDashIntervalLabel11" text="Dash interval" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <HBox fx:id="gridDashIntervalHBox11" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="hboxTextField" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                             <children>
+                                                <JFXTextField alignment="CENTER_RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </JFXTextField>
+                                                <Label alignment="CENTER_RIGHT" maxHeight="17.0" maxWidth="13.0" minHeight="17.0" minWidth="13.0" prefHeight="17.0" prefWidth="13.0" text="px">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <JFXSlider fx:id="gridLineDashIntervalSlider11" max="30.0" min="1.0" onMouseDragged="#onGridDashLineIntervalSliderMouseDragged" value="4.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </JFXSlider>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="categoryVBox22" prefWidth="370.0" styleClass="categoryProperties" stylesheets="@../css/colorTab.css">
+                                 <children>
+                                    <Label prefHeight="20.0" prefWidth="55.0" text="Subgrid">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <GridPane alignment="CENTER_LEFT" prefWidth="350.0" styleClass="categoryGridPane" stylesheets="@../css/colorTab.css">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="59.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.0" minWidth="10.0" prefWidth="172.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label text="Color">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <ColorPicker fx:id="gridColorPicker12" maxWidth="1.7976931348623157E308" onAction="#onGridLineColorPickerAction" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                          </ColorPicker>
+                                          <Label text="Line type" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <JFXComboBox fx:id="colorTabGridLineTypeComboBox12" focusColor="RED" maxWidth="1.7976931348623157E308" onAction="#onGridLineTypeAction" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                          </JFXComboBox>
+                                          <Label text="Line width" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hboxTextField" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <children>
+                                                <JFXTextField alignment="CENTER_RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </JFXTextField>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" maxHeight="17.0" maxWidth="13.0" minHeight="17.0" minWidth="13.0" prefHeight="17.0" prefWidth="13.0" text="px" textAlignment="CENTER">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <JFXSlider fx:id="gridLineWidthSlider12" max="10.0" min="1.0" onMouseDragged="#onGridLineWidthSliderMouseDragged" value="1.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </JFXSlider>
+                                          <Label fx:id="gridDashLengthLabel12" text="Dash length" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <HBox fx:id="gridDashLengthHBox12" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="hboxTextField" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                             <children>
+                                                <JFXTextField alignment="CENTER_RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </JFXTextField>
+                                                <Label alignment="CENTER_RIGHT" maxHeight="17.0" maxWidth="13.0" minHeight="17.0" minWidth="13.0" prefHeight="17.0" prefWidth="13.0" text="px">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <JFXSlider fx:id="gridLineDashLengthSlider12" max="30.0" min="1.0" onMouseDragged="#onGridDashLineLengthSliderMouseDragged" value="3.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </JFXSlider>
+                                          <Label fx:id="gridDashIntervalLabel12" text="Dash interval" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <HBox fx:id="gridDashIntervalHBox12" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="hboxTextField" stylesheets="@../css/colorTab.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets top="5.0" />
+                                             </GridPane.margin>
+                                             <children>
+                                                <JFXTextField alignment="CENTER_RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </JFXTextField>
+                                                <Label alignment="CENTER_RIGHT" maxHeight="17.0" maxWidth="13.0" minHeight="17.0" minWidth="13.0" prefHeight="17.0" prefWidth="13.0" text="px">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <JFXSlider fx:id="gridLineDashIntervalSlider12" max="30.0" min="1.0" onMouseDragged="#onGridDashLineIntervalSliderMouseDragged" value="4.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </JFXSlider>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                            </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+               </Tab>
+               <Tab closable="false">
+                   <graphic>
+                       <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <Image url="@../leftWindowBarIcons/icons8-settings-20-1.png" />
+                       </ImageView>
+                   </graphic>
+                   <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@../css/settingsTab.css" />
+               </Tab>
+           </TabPane>
+           <Pane fx:id="rightPane" prefHeight="654.0" prefWidth="614.0" styleClass="rightSide" stylesheets="@../css/main.css">
+               <Canvas fx:id="graphCanvas" height="100.0" onMouseDragged="#onGraphCanvasMouseDragged" onMouseMoved="#onGraphCanvasMouseMoved" onMousePressed="#OnGraphCanvasMousePressed" onScroll="#onGraphCanvasMouseScroll" width="100.0" />
+           </Pane>
+       </SplitPane>
+   </center>
+   <bottom>
+       <GridPane styleClass="bottomWindowBar" stylesheets="@../css/bottomBar.css" BorderPane.alignment="CENTER">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <GridPane.margin>
+                   <Insets left="10.0" />
+               </GridPane.margin>
+               <Label fx:id="bottomBarXLabel" text="X: 0,00" />
+               <Label fx:id="bottomBarYLabel" text="Y: 0,00" />
+           </HBox>
+           <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1">
+               <opaqueInsets>
+                   <Insets />
+               </opaqueInsets>
+               <padding>
+                   <Insets right="10.0" />
+               </padding>
+               <Label fx:id="bottomBarScaleLabel" text="Scale : 1" />
+               <Label fx:id="bottomBarScaleRatioLabel" text="Scale ratio: 1,1" />
+           </HBox>
+       </GridPane>
+   </bottom>
+   <top>
+       <VBox prefHeight="34.0" prefWidth="1280.0" styleClass="topWindowBar" stylesheets="@../css/topBar.css" BorderPane.alignment="CENTER">
+           <Pane prefHeight="3.0" prefWidth="200.0" />
+           <GridPane fx:id="topGridPaneBar" onMouseDragged="#onTopBarMouseDragged" onMousePressed="#onTopBarMousePressed">
+               <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                   <padding>
+                       <Insets left="14.0" />
+                   </padding>
+                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                       <Image url="@../topWindowBarIcons/icons8-plot-20-1.png" />
+                   </ImageView>
+                   <MenuBar styleClass="topWindowMenuBar" stylesheets="@../css/topBar.css">
+                       <Menu mnemonicParsing="false" text="File">
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                       </Menu>
+                       <Menu mnemonicParsing="false" text="View">
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                       </Menu>
+                       <Menu mnemonicParsing="false" text="Help">
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                       </Menu>
+                   </MenuBar>
+               </HBox>
+               <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="3.0" GridPane.columnIndex="1">
+                   <padding>
+                       <Insets right="5.0" />
+                   </padding>
+                   <Button focusTraversable="false" mnemonicParsing="false" styleClass="topWindowBarButton" stylesheets="@../css/topBar.css">
+                       <graphic>
+                           <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                               <Image url="@../topWindowBarIcons/icons8-minimize-20.png" />
+                           </ImageView>
+                       </graphic>
+                   </Button>
+                   <Button focusTraversable="false" mnemonicParsing="false" styleClass="topWindowBarButton">
+                       <graphic>
+                           <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                               <Image url="@../topWindowBarIcons/icons8-maximize-20.png" />
+                           </ImageView>
+                       </graphic>
+                   </Button>
+                   <Button fx:id="closeButton" focusTraversable="false" mnemonicParsing="false" onAction="#onCloseButtonAction" styleClass="topWindowBarCloseButton">
+                       <graphic>
+                           <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                               <Image url="@../topWindowBarIcons/icons8-close-20-2.png" />
+                           </ImageView>
+                       </graphic>
+                   </Button>
+               </HBox>
+           </GridPane>
+         <effect>
+            <DropShadow />
+         </effect>
+       </VBox>
+   </top>
+</BorderPane>

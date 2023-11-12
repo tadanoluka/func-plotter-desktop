@@ -1,0 +1,40 @@
+.mainWindowSplitPane {
+    -fx-background-color: #2d2e33;
+}
+.mainWindowSplitPane:horizontal .split-pane-divider {
+    -fx-pref-width: 1;
+    -fx-background-color: #2d2e33;
+}
+.leftSideTabPane {
+    -fx-background-color: #3D3E45;
+    -fx-min-width: 400;
+}
+.leftSideTabPane .tab-header-area {
+    -fx-padding: 5 5 5 5;
+}
+.leftSideTabPane .tab-header-area .tab-header-background {
+    -fx-background-color: #3D3E45;
+    -fx-border-color: #2d2e33;
+    -fx-border-style: hidden hidden solid hidden;
+}
+.leftSideTabPane .tab {
+    -fx-background-color: transparent;
+}
+.leftSideTabPane .tab:hover {
+    -fx-background-color: #36383d;
+    -fx-border-radius: 7 7 7 7;
+    -fx-background-radius: 7 7 7 7;
+}
+.leftSideTabPane .tab:pressed {
+    -fx-background-color: #2e3034;
+    -fx-border-radius: 7 7 7 7;
+    -fx-background-radius: 7 7 7 7;
+}
+.leftSideTabPane:focused .tab-header-area .headers-region .tab:selected .focus-indicator {
+    -fx-border-width: 0;
+    -fx-border-insets: 0 0 0 0;
+    -fx-border-radius: 0;
+}
+.rightSide {
+    -fx-background-color: #36373d;
+}

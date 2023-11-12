@@ -1,0 +1,62 @@
+.topWindowBar {
+    -fx-background-color: #323339;
+}
+.topWindowBarButton {
+    -fx-background-color: #323339;
+    -fx-border-radius: 7 7 7 7;
+    -fx-background-radius: 7 7 7 7;
+}
+.topWindowBarButton:hover {
+    -fx-background-color: #29292f;
+}
+.topWindowBarButton:pressed {
+    -fx-background-color: #232328;
+}
+.topWindowBarCloseButton {
+    -fx-background-color: #303139;
+    -fx-border-radius: 7 7 7 7;
+    -fx-background-radius: 7 7 7 7;
+}
+.topWindowBarCloseButton:hover {
+    -fx-background-color: #f75568;
+}
+.topWindowBarCloseButton:pressed {
+    -fx-background-color: #ea3245;
+}
+.topWindowMenuBar {
+    -fx-background-color: #323339;
+    -fx-text-fill: #ffffff;
+}
+.topWindowMenuBar .menu .label {
+    -fx-text-fill: #ffffff;
+}
+.topWindowMenuBar .menu {
+    -fx-border-radius: 7 7 7 7;
+    -fx-background-radius: 7 7 7 7;
+}
+.topWindowMenuBar .menu:hover {
+    -fx-background-color: #29292f;
+}
+.topWindowMenuBar .menu:showing {
+    -fx-background-color: #29292f;
+    -fx-translate-y: 3;
+    -fx-border-radius: 7 7 0 0;
+    -fx-background-radius: 7 7 0 0;
+}
+.topWindowMenuBar .menu-item {
+    -fx-background-color: #29292f;
+}
+.topWindowMenuBar .menu-item:hover {
+    -fx-background-color: #1e1e21;
+}
+.context-menu {
+    -fx-translate-y: 3;
+    -fx-pref-width: 150;
+    -fx-background-color: #29292f;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0 0 7 7;
+    -fx-border-radius: 0 0 7 7;
+    -fx-border-width: 1;
+    -fx-border-color: rgba(0, 0, 0, 0.3);
+    -fx-border-style: hidden solid solid hidden;
+}
